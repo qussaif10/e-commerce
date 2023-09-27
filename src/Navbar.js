@@ -4,6 +4,7 @@ import './Navbar.css';
 import websiteLogo from './Logo.png';
 import accountIcon from './accountIcon.png';
 import cartIcon from './cartIcon.png';
+import searchIcon from './search.png';
 
 const Navbar = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -24,11 +25,13 @@ const Navbar = () => {
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />
-                <button>Search</button>
+                <button><img src={searchIcon}  alt="Search Icon"/></button>
             </div>
             <div className="icons-on-the-right">
                 <div>
-                    <img src={cartIcon} alt="Shopping Cart" className="cart-icon"/>
+                    <Link to="/cart"> {/* Add this line */}
+                        <img src={cartIcon} alt="Shopping Cart" className="cart-icon"/>
+                    </Link> {/* Add this line */}
                 </div>
                 <div>
                     <Link to="/account/signup">

@@ -1,0 +1,62 @@
+.purchase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.purchase-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-logos, .shipping-logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-logos img, .shipping-logos img {
+    width: 80px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.purchase-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-details,
+.payment-methods,
+.shipping-services {
+    width: 100%;
+    text-align: center;
+}

@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
-import Navbar from './Navbar'; // Path to Navbar.js
-import Products from './Products'; // Path to Products.js
-import Account from './Account'; // Path to Account.js
-import ProductDetail from './ProductDetail'; // Path to ProductDetail.js
-import './Navbar.css'; // General App styling
+import Navbar from './Navbar';
+import Products from './Products';
+import Account from './Account';
+import ProductDetail from './ProductDetail';
+import Cart from './Cart';
+import Purchase from './Purchase';  // Import the Purchase component here
+import './Navbar.css';
 
 const MainApp = () => {
     const location = useLocation();
+    const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://fakestoreapi.com/products`)
+            .then(res => res.json())
+            .then(json => {
+                const randomProducts = json.sort(() => 0.5 - Math.random()).slice(0, 5);
+                setCartItems(randomProducts);
+            })
+            .catch(error => console.error("Error fetching data: ", error));
+    }, []);
 
     return (
         <div className="app">
@@ -15,8 +28,9 @@ const MainApp = () => {
             <Switch>
                 <Route path="/" exact component={Products} />
                 <Route path="/account" component={Account} />
-                <Route path="/Products/product_:id" component={ProductDetail} />
-                {/* Add more routes here as needed */}
+                <Route path="/products/product_:id" component={ProductDetail} />
+                <Route path="/cart" render={() => <Cart cartItems={cartItems} />} />
+                <Route path="/purchase" component={Purchase} />  {/* Add this line */}
             </Switch>
         </div>
     );

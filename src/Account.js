@@ -22,12 +22,14 @@ function SignUp() {
                 <div className="signup-box">
                     <h1>Sign Up</h1>
                     <div className="signup-field">
-                        <label className="signup-label">Email</label>
-                        <input type="email" />
+                        <label className="signup-label"></label>
+                        <input type="email"
+                                placeholder="email"/>
                     </div>
                     <div className="signup-field">
-                        <label className="signup-label">Password</label>
-                        <input type="password" />
+                        <label className="signup-label"></label>
+                        <input type="password"
+                        placeholder="password"/>
                     </div>
                     <button onClick={handleSubmit}>Sign Up</button>
                 </div>

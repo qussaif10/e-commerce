@@ -1,35 +1,33 @@
-import React, { useState } from 'react';
-import './App.css';
-import websiteLogo from './Logo.png';
-import accountIcon from './accountIcon.png';
-import cartIcon from './cartIcon.png'; // Import the cart icon
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import Navbar from './Navbar'; // Path to Navbar.js
+import Products from './Products'; // Path to Products.js
+import Account from './Account'; // Path to Account.js
+import ProductDetail from './ProductDetail'; // Path to ProductDetail.js
+import './Navbar.css'; // General App styling
 
-const Navbar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
+const MainApp = () => {
+    const location = useLocation();
 
     return (
-        <nav className="navbar">
-            <img src={websiteLogo} alt="Website Logo" className="website-logo"/>
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
-                <button>Search</button>
-            </div>
-            <div className="icons-on-the-right">
-            <img src={cartIcon} alt="Shopping Cart" className="cart-icon"/>
-            <img src={accountIcon} alt="Account" className="account-icon"/>
-            </div>
-        </nav>
+        <div className="app">
+            {(location.pathname !== '/account/signup' && location.pathname !== '/account/login') && <Navbar />}
+            <Switch>
+                <Route path="/" exact component={Products} />
+                <Route path="/account" component={Account} />
+                <Route path="/Products/product_:id" component={ProductDetail} />
+                {/* Add more routes here as needed */}
+            </Switch>
+        </div>
     );
-
 };
 
-export default Navbar;
+const App = () => {
+    return (
+        <Router>
+            <MainApp />
+        </Router>
+    );
+};
+
+export default App;

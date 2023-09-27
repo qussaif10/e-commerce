@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #112d4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;  /* This will make the background scale */
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    padding: 40px;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.signup-field {
+    margin: 20px 0;
+}
+
+.signup-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #112d4e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    width: 40%;  /* Adjust as needed */
+    aspect-ratio: auto;  /* Maintain the logo's aspect ratio */
+}

@@ -21,7 +21,6 @@
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  border: 1px solid #2980b9;
   border-radius: 4px;
 }
 
@@ -31,7 +30,7 @@
   border: none;
   border-radius: 4px 0 0 4px;
   outline: none;
-  flex-grow: 1;
+  flex-grow: 15;
   transition: box-shadow 0.2s;
 }
 
@@ -55,7 +54,7 @@
 
 .icons-on-the-right {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .account-icon {

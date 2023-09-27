@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/e-commerce/static/css/main.ff542916.css",
+    "main.js": "/e-commerce/static/js/main.2b796856.js",
+    "static/js/787.46493d11.chunk.js": "/e-commerce/static/js/787.46493d11.chunk.js",
+    "static/media/vecteezy_visa-logo-transparent-png_22100873_514.png": "/e-commerce/static/media/vecteezy_visa-logo-transparent-png_22100873_514.02002017a1f2036535c8.png",
+    "static/media/Logo.png": "/e-commerce/static/media/Logo.7d2cc5b7620936994709.png",
+    "index.html": "/e-commerce/index.html",
+    "main.ff542916.css.map": "/e-commerce/static/css/main.ff542916.css.map",
+    "main.2b796856.js.map": "/e-commerce/static/js/main.2b796856.js.map",
+    "787.46493d11.chunk.js.map": "/e-commerce/static/js/787.46493d11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff542916.css",
+    "static/js/main.2b796856.js"
+  ]
+}
